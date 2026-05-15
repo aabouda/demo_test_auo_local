@@ -1,0 +1,324 @@
+[
+  {
+    "test_case_id": 76,
+    "name": "API: POST Financial Transaction Validation — APPROVED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 77,
+    "name": "API: POST Financial Transaction Validation — APPROVED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 78,
+    "name": "API: Financial Transaction Validation — 401 missing auth token",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 79,
+    "name": "API: POST Financial Transaction Validation — APPROVED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 80,
+    "name": "API: Financial Transaction Validation — field max-length boundary",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 81,
+    "name": "API: POST Financial Transaction Validation — APPROVED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 82,
+    "name": "API: POST Premium Account Opening Process — Api Contract",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 83,
+    "name": "API: Premium Account Opening Process — 401 missing auth token",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 84,
+    "name": "API: POST Premium Account Opening Process — Error Handling",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 85,
+    "name": "API: POST Premium Account Opening Process — DRAFT→SUBMITTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 86,
+    "name": "API: POST Premium Account Opening Process — SUBMITTED→VALIDATED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 87,
+    "name": "API: POST Premium Account Opening Process — Api Contract",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 88,
+    "name": "API: POST Customer Identity Verification Process — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 89,
+    "name": "API: Customer Identity Verification Process — 401 missing auth token",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 90,
+    "name": "API: Customer Identity Verification Process — field max-length boundary",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 91,
+    "name": "API: POST Customer Identity Verification Process — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 92,
+    "name": "API: POST Customer Identity Verification Process — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 93,
+    "name": "API: POST Customer Identity Verification Process — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 94,
+    "name": "API: POST Customer Identity Verification — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 95,
+    "name": "API: Customer Identity Verification — idempotent duplicate prevention",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 96,
+    "name": "API: POST Customer Identity Verification — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 97,
+    "name": "API: Customer Identity Verification — field max-length boundary",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 98,
+    "name": "API: POST Customer Identity Verification — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 99,
+    "name": "API: POST Customer Identity Verification — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 100,
+    "name": "API: POST Customer Identity Verification — VALIDATED→REJECTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 101,
+    "name": "API: POST Loan Application Processing — PENDING→PROCESSING",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 102,
+    "name": "API: POST Loan Application Processing — PENDING→PROCESSING",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 103,
+    "name": "API: Loan Application Processing — 401 missing auth token",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 104,
+    "name": "API: POST Loan Application Processing — PENDING→PROCESSING",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 105,
+    "name": "API: POST Loan Application Processing — DRAFT→SUBMITTED",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 106,
+    "name": "API: POST Loan Application Processing — PENDING→PROCESSING",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 107,
+    "name": "API: POST Entity Onboarding Validation — VALIDATED→ACTIVE",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 108,
+    "name": "API: Entity Onboarding Validation — 401 missing auth token",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 109,
+    "name": "API: POST Entity Onboarding Validation — VALIDATED→ACTIVE",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 110,
+    "name": "API: Entity Onboarding Validation — field max-length boundary",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 111,
+    "name": "API: POST Entity Onboarding Validation — VALIDATED→ACTIVE",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 112,
+    "name": "API: POST Customer Identity Verification Request — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 113,
+    "name": "API: POST Customer Identity Verification Request — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 114,
+    "name": "API: POST Customer Identity Verification Request — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 115,
+    "name": "API: POST Customer Identity Verification Request — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 116,
+    "name": "API: POST Customer Identity Verification Request — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 117,
+    "name": "API: POST Customer Identity Verification Request — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 118,
+    "name": "API: POST Validate Loan Duration — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 119,
+    "name": "API: Validate Loan Duration — 401 missing auth token",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 120,
+    "name": "API: Validate Loan Duration — field max-length boundary",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  },
+  {
+    "test_case_id": 121,
+    "name": "API: POST Validate Loan Duration — VALIDATED→HTTP",
+    "enabled": false,
+    "test_type": "api_e2e",
+    "steps": []
+  }
+]

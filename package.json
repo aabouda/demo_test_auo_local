@@ -1,0 +1,12 @@
+{
+  "name": "playwright-ia-simples-unified",
+  "version": "1.0.0",
+  "description": "Framework unifié : tests UI (Playwright/Cucumber) + API + API E2E",
+  "private": true,
+  "scripts": {
+    "run": "node run.js",
+    "test:ui": "node run.js --test-type ui",
+    "test:api": "node run.js --test-type api",
+    "test:api-e2e": "node run.js --test-type api_e2e"
+  }
+}

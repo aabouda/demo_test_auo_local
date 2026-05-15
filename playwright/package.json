@@ -1,0 +1,45 @@
+{
+  "name": "playwrightpoc",
+  "version": "1.0.0",
+  "description": "https://playwright.dev/docs/intro",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "install-browsers": "npx playwright install",
+    "test": "cucumber-js --config cucumber.mjs --profile test_runner",
+    "post-run": "node post-run.mjs",
+    "test:full": "cucumber-js --config cucumber.mjs --profile test_runner; node post-run.mjs $ARGS_FILE",
+    "allure:gen": "npx allure generate ./reports/allure-results --clean  -o ./reports/allure-report",
+    "allure:generate:open": "npx allure generate ./reports/allure-results --clean -o ./reports/allure-report && allure open ./reports/allure-report",
+    "allure:open": "allure open ./reports/allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^20.11.18",
+    "allure-commandline": "^2.27.0",
+    "allure-cucumberjs": "^2.12.0",
+    "allure-js-commons": "^2.12.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^9.6.0",
+    "archiver": "^7.0.1",
+    "cheerio": "^1.1.2",
+    "form-data": "^4.0.5",
+    "jsdom": "^26.1.0",
+    "minimist": "^1.2.8",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.92.1",
+    "pg": "^8.16.0",
+    "playwright": "^1.55.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "reflect-metadata": "^0.2.2",
+    "string-similarity": "^4.0.4"
+  }
+}

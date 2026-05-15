@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────
+# config.yml — généré par TuringOne (ne pas commiter le token)
+# Exécution locale : python run.py
+# ─────────────────────────────────────────────────────────
+
+turing_one:
+  api_url: 
+  security_token: vKfkGuc7aDxff2ZmKkInm_pLy73HmAdGkEK5J6k3qIM    # ⚠ ne pas commiter — utiliser une variable d'env
+
+execution:
+  campagne_type: api   # api | api_e2e | ui
+  campagne_id: 61
+  environment_id: 74
+  create_execution: true
+  execution_id:    # laissé vide → run.py créera une nouvelle exécution
+
+test_data:
+  args_file: api01   # dossier dans test-data/
+
+ui:
+  headless: true
+  keep_videos: false
+  slow_mo: 0
+  browser: chromium
+
+reports:
+  upload_to_s3: false

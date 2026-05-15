@@ -1,0 +1,76 @@
+name: TuringOne — Run Tests
+
+# Déclenché automatiquement par TuringOne lorsqu'il pousse config.yml ou test-data/
+on:
+  push:
+    paths:
+      - "config.yml"
+      - "test-data/**"
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python (toujours nécessaire) ────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies (pytest + requests + …)
+        run: pip install -r frameworks/requirements.txt
+
+      # ── 3. Détecter le type de test depuis config.yml ──────────────────────
+      - name: Detect campagne_type
+        id: detect
+        run: |
+          TYPE=$(python3 -c "
+          import yaml, sys
+          try:
+              c = yaml.safe_load(open('config.yml'))
+              print(c.get('execution', {}).get('campagne_type', 'api'))
+          except Exception as e:
+              print('api')
+          ")
+          echo "camp_type=$TYPE" >> $GITHUB_OUTPUT
+          echo "Detected campagne_type: $TYPE"
+
+      # ── 4. Node.js (uniquement pour les tests UI Playwright/Cucumber) ───────
+      - name: Set up Node.js 20
+        if: steps.detect.outputs.camp_type == 'ui'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Node dependencies (Cucumber + Playwright)
+        if: steps.detect.outputs.camp_type == 'ui'
+        working-directory: playwright
+        run: npm ci
+
+      - name: Install Playwright browser (Chromium)
+        if: steps.detect.outputs.camp_type == 'ui'
+        working-directory: playwright
+        run: npx playwright install chromium --with-deps
+
+      # ── 5. Lancement TuringOne ─────────────────────────────────────────────
+      - name: Run TuringOne tests
+        run: python run.py
+
+      # ── 6. Upload des rapports (même en cas d'échec) ───────────────────────
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: turingone-reports-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: ignore
+          path: |
+            frameworks/api_framework/reports/
+            frameworks/api_e2e_framework/reports/
+            playwright/reports/

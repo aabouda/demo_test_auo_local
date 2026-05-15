@@ -1,0 +1,103 @@
+{
+  "apis": {
+    "_api_health_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/health",
+      "method": "GET"
+    },
+    "_api_customers_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/customers",
+      "method": "POST"
+    },
+    "_api_customers__id__app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/customers/{id}",
+      "method": "PUT"
+    },
+    "_api_accounts__id__balance_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/accounts/{id}/balance",
+      "method": "GET"
+    },
+    "_api_cards_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/cards",
+      "method": "POST"
+    },
+    "_api_accounts__id__app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/accounts/{id}",
+      "method": "GET"
+    },
+    "_api_cards__id__app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/cards/{id}",
+      "method": "GET"
+    },
+    "_api_transfers_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/transfers",
+      "method": "POST"
+    },
+    "_api_loans_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/loans",
+      "method": "POST"
+    },
+    "_api_kyc_validate_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/kyc/validate",
+      "method": "POST"
+    },
+    "_api_accounts_app313": {
+      "application": "313",
+      "base_url": "https://banking-demo-api-86o6.onrender.com/",
+      "base_url_auth": null,
+      "environment_variable": null,
+      "type_authentification": "1",
+      "endpoint": "/api/accounts",
+      "method": "POST"
+    }
+  }
+}

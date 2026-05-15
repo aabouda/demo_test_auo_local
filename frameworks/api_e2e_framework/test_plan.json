@@ -1,0 +1,241 @@
+[
+  {
+    "name": "Test Scenario - Virement bancaire",
+    "description": "Effectuer un virement et valider l’opération complète",
+    "is_enabled": 1,
+    "auth_type_id": 1,
+    "type_test_case": "1",
+    "profile_id": 1,
+    "project_id": 170,
+    "steps": [
+      {
+        "id": 1,
+        "api": "http://localhost:8080/obp/v4.0.0/users/{USER_ID}/auth-context",
+        "method": "POST",
+        "action": "Given I authenticate with valid credentials and receive an access token",
+        "params": {
+          "inputs": [
+            {
+              "name": "USER_ID",
+              "type": "string",
+              "required": true,
+              "include": true,
+              "value": "Auto"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "access_token",
+              "type": "string",
+              "required": true,
+              "example": "eyJhbGciOi..."
+            }
+          ]
+        },
+        "api_key_header": "DirectLogin username=abouda.ala@gmail.com,password=Tunage19809*,consumer_key=aygtoe0ikfl1cjtbluznuubsljqwicmu0y0a43en",
+        "token_endpoint": "",
+        "client_secret": "",
+        "scope": "",
+        "grant_type": "",
+        "username": "",
+        "password": "",
+        "hmac_key": "",
+        "hmac_signature": "",
+        "client_id": "",
+        "api_config": {
+          "id": 5282,
+          "name": "http://localhost:8080/obp/v4.0.0/users/{USER_ID}/auth-context",
+          "description": "<p>Create User Auth Context. These key value pairs will be propagated over connector to adapter. Normally used for mapping OBP user and<br />Bank User/Customer.<br />User Authentication is Required. The User must be logged in. The Application must also be authenticated.</p><p><strong>URL Parameters:</strong></p><p><a href=\"/glossary#User.user_id\">USER_ID</a>: 9ca9a7e4-6d02-40e3-a129-0b2bf89de9b1</p><p><strong>JSON request body fields:</strong></p><p><a href=\"/glossary#\"><strong>key</strong></a>: CustomerNumber</p><p><a href=\"/glossary#\"><strong>value</strong></a>: 5987953</p><p><strong>JSON response body fields:</strong></p><p><a href=\"/glossary#\"><strong>key</strong></a>: CustomerNumber</p><p><a href=\"/glossary#\"><strong>time_stamp</strong></a>: 1100-01-01T01:01:01.000Z</p><p><a href=\"/glossary#user_auth_context_id\"><strong>user_auth_context_id</strong></a>:</p><p><a href=\"/glossary#\"><strong>user_id</strong></a>: 9ca9a7e4-6d02-40e3-a129-0b2bf89de9b1</p><p><a href=\"/glossary#\"><strong>value</strong></a>: 5987953</p>",
+          "method": "POST",
+          "auth_type": "2",
+          "parameters": null,
+          "headers": "[]",
+          "is_enabled": 1,
+          "ai_flag": 0,
+          "nb_test_cases": 0,
+          "application_id": 240,
+          "created_at": "2024-12-06T23:19:27.472791",
+          "updated_at": "2024-12-06T23:19:27.472791",
+          "api": "http://localhost:8080/obp/v4.0.0/users/{USER_ID}/auth-context",
+          "summary": "Create User Auth Context",
+          "responses": "\"[{\\\"Code\\\": \\\"201\\\", \\\"Description\\\": \\\"Success\\\", \\\"Structure JSON\\\": {\\\"required\\\": [\\\"time_stamp\\\", \\\"user_id\\\", \\\"key\\\", \\\"user_auth_context_id\\\", \\\"value\\\"], \\\"properties\\\": {\\\"time_stamp\\\": {\\\"type\\\": \\\"string\\\", \\\"format\\\": \\\"date\\\", \\\"example\\\": \\\"1100-01-01T00:00:00Z\\\"}, \\\"user_id\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"9ca9a7e4-6d02-40e3-a129-0b2bf89de9b1\\\"}, \\\"key\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"CUSTOMER_NUMBER\\\"}, \\\"user_auth_context_id\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"613c83ea-80f9-4560-8404-b9cd4ec42a7f\\\"}, \\\"value\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"78987432\\\"}}}}, {\\\"Code\\\": \\\"400\\\", \\\"Description\\\": \\\"Error\\\", \\\"Structure JSON\\\": {\\\"properties\\\": {\\\"message\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"OBP-20001: User not logged in. Authentication is required!\\\"}}}}]\"",
+          "authentication": 2,
+          "type_authentication": 2,
+          "is_swagger": 1,
+          "is_list": false,
+          "project_id": 170,
+          "operationId": null,
+          "basePath": "/",
+          "parametres_path": "[{\"name\": \"USER_ID\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"The user id\"}]",
+          "parametres_query": "[]",
+          "parametres_header": "[]",
+          "parametres_form_data": "[]",
+          "parametres_body": "[{\"name\": \"key\", \"in\": \"body\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"\", \"enum\": null, \"default\": null, \"minimum\": null, \"maximum\": null, \"example\": \"CUSTOMER_NUMBER\", \"nullable\": null, \"readOnly\": null, \"writeOnly\": null}, {\"name\": \"value\", \"in\": \"body\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"\", \"enum\": null, \"default\": null, \"minimum\": null, \"maximum\": null, \"example\": \"78987432\", \"nullable\": null, \"readOnly\": null, \"writeOnly\": null}]",
+          "response_headers": "{}",
+          "consumes": "[]",
+          "produces": "[]",
+          "accept": "[]",
+          "securityDefinitions": "{\"directLogin\": {\"type\": \"apiKey\", \"description\": \"https://github.com/OpenBankProject/OBP-API/wiki/Direct-Login\", \"in\": \"header\", \"name\": \"Authorization\"}, \"gatewayLogin\": {\"type\": \"apiKey\", \"description\": \"https://github.com/OpenBankProject/OBP-API/wiki/Gateway-Login\", \"in\": \"header\", \"name\": \"Authorization\"}}",
+          "security": "[{\"directLogin\": [], \"gatewayLogin\": []}]",
+          "methode_authentication": "apiKey"
+        }
+      },
+      {
+        "id": 2,
+        "api": "http://localhost:8080/obp/v4.0.0/my/accounts",
+        "method": "GET",
+        "action": "When I request the list of my accounts",
+        "params": {
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "accounts[0].id",
+              "type": "string",
+              "required": true,
+              "example": "5995d6a2-01b3-423c-a173-5481df49bdaf"
+            },
+            {
+              "name": "accounts[0].bank_id",
+              "type": "string",
+              "required": true,
+              "example": "gh.29.uk"
+            }
+          ]
+        },
+        "api_key_header": "DirectLogin username=abouda.ala@gmail.com,password=Tunage19809*,consumer_key=aygtoe0ikfl1cjtbluznuubsljqwicmu0y0a43en",
+        "token_endpoint": "",
+        "client_secret": "",
+        "scope": "",
+        "grant_type": "",
+        "username": "",
+        "password": "",
+        "hmac_key": "",
+        "hmac_signature": "",
+        "client_id": "",
+        "api_config": {
+          "id": 5226,
+          "name": "http://localhost:8080/obp/v4.0.0/my/accounts",
+          "description": "<p>Returns the list of accounts containing private views for the user.<br />Each account lists the views available to the user.</p><p>optional request parameters:</p><ul><li>account_type_filter: one or many accountType value, split by comma</li><li>account_type_filter_operation: the filter type of account_type_filter, value must be INCLUDE or EXCLUDE</li></ul><p>whole url example:<br />/my/accounts?account_type_filter=330,CURRENT+PLUS&amp;account_type_filter_operation=INCLUDE</p><p>User Authentication is Required. The User must be logged in. The Application must also be authenticated.</p><p><strong>JSON response body fields:</strong></p><p><a href=\"/glossary#account_routings\"><strong>account_routings</strong></a>:</p><p><a href=\"/glossary#\"><strong>account_type</strong></a>: AC</p><p><a href=\"/glossary#accounts\"><strong>accounts</strong></a>:</p><p><a href=\"/glossary#address\"><strong>address</strong></a>:</p><p><a href=\"/glossary#\"><strong>bank_id</strong></a>: gh.29.uk</p><p><a href=\"/glossary#description\"><strong>description</strong></a>: Description of the object. Maximum length is 2000. It can be any characters here.</p><p><a href=\"/glossary#id\"><strong>id</strong></a>: d8839721-ad8f-45dd-9f78-2080414b93f9</p><p><a href=\"/glossary#is_public\"><strong>is_public</strong></a>: false</p><p><a href=\"/glossary#\"><strong>label</strong></a>: My Account</p><p><a href=\"/glossary#scheme\"><strong>scheme</strong></a>: OBP</p><p><a href=\"/glossary#short_name\"><strong>short_name</strong></a>:</p><p><a href=\"/glossary#views\"><strong>views</strong></a>:</p>",
+          "method": "GET",
+          "auth_type": "2",
+          "parameters": null,
+          "headers": "[]",
+          "is_enabled": 1,
+          "ai_flag": 0,
+          "nb_test_cases": 0,
+          "application_id": 240,
+          "created_at": "2024-12-06T23:19:27.472791",
+          "updated_at": "2024-12-06T23:19:27.472791",
+          "api": "http://localhost:8080/obp/v4.0.0/my/accounts",
+          "summary": "Get Accounts at all Banks (private)",
+          "responses": "\"[{\\\"Code\\\": \\\"200\\\", \\\"Description\\\": \\\"Success\\\", \\\"Structure JSON\\\": {\\\"required\\\": [\\\"accounts\\\"], \\\"properties\\\": {\\\"accounts\\\": {\\\"type\\\": \\\"array\\\", \\\"items\\\": {\\\"required\\\": [\\\"account_routings\\\", \\\"label\\\", \\\"account_type\\\", \\\"bank_id\\\", \\\"id\\\", \\\"views\\\"], \\\"properties\\\": {\\\"account_routings\\\": {\\\"type\\\": \\\"array\\\", \\\"items\\\": {\\\"required\\\": [\\\"scheme\\\", \\\"address\\\"], \\\"properties\\\": {\\\"scheme\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"OBP\\\"}, \\\"address\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"8ca8a7e4-6d02-40e3-a129-0b2bf89de9f0\\\"}}}}, \\\"label\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"String\\\"}, \\\"account_type\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"330\\\"}, \\\"bank_id\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"gh.29.uk\\\"}, \\\"id\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"5995d6a2-01b3-423c-a173-5481df49bdaf\\\"}, \\\"views\\\": {\\\"type\\\": \\\"array\\\", \\\"items\\\": {\\\"required\\\": [\\\"id\\\", \\\"short_name\\\", \\\"description\\\", \\\"is_public\\\"], \\\"properties\\\": {\\\"id\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"owner\\\"}, \\\"short_name\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"owner\\\"}, \\\"description\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"This view is for the owner for the account.\\\"}, \\\"is_public\\\": {\\\"type\\\": \\\"boolean\\\", \\\"example\\\": \\\"false\\\"}}}}}}}}}}, {\\\"Code\\\": \\\"400\\\", \\\"Description\\\": \\\"Error\\\", \\\"Structure JSON\\\": {\\\"properties\\\": {\\\"message\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"OBP-20001: User not logged in. Authentication is required!\\\"}}}}]\"",
+          "authentication": 2,
+          "type_authentication": 2,
+          "is_swagger": 1,
+          "is_list": false,
+          "project_id": 170,
+          "operationId": null,
+          "basePath": "/",
+          "parametres_path": "[]",
+          "parametres_query": "[]",
+          "parametres_header": "[]",
+          "parametres_form_data": "[]",
+          "parametres_body": "[]",
+          "response_headers": "{}",
+          "consumes": "[]",
+          "produces": "[]",
+          "accept": "[]",
+          "securityDefinitions": "{\"directLogin\": {\"type\": \"apiKey\", \"description\": \"https://github.com/OpenBankProject/OBP-API/wiki/Direct-Login\", \"in\": \"header\", \"name\": \"Authorization\"}, \"gatewayLogin\": {\"type\": \"apiKey\", \"description\": \"https://github.com/OpenBankProject/OBP-API/wiki/Gateway-Login\", \"in\": \"header\", \"name\": \"Authorization\"}}",
+          "security": "[{\"directLogin\": [], \"gatewayLogin\": []}]",
+          "methode_authentication": "apiKey"
+        }
+      },
+      {
+        "id": 3,
+        "api": "http://localhost:8080/obp/v4.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/account-access/revoke",
+        "method": "POST",
+        "action": "Then I should see at least one account available",
+        "params": {
+          "inputs": [
+            {
+              "name": "ACCOUNT_ID",
+              "type": "string",
+              "required": true,
+              "include": true,
+              "value": "link:accounts[0].id"
+            },
+            {
+              "name": "BANK_ID",
+              "type": "string",
+              "required": true,
+              "include": true,
+              "value": "link:accounts[0].bank_id"
+            },
+            {
+              "name": "user_id",
+              "type": "string",
+              "required": true,
+              "include": true,
+              "value": "Auto"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "revoked",
+              "type": "boolean",
+              "required": true,
+              "example": true
+            }
+          ]
+        },
+        "api_key_header": "DirectLogin username=abouda.ala@gmail.com,password=Tunage19809*,consumer_key=aygtoe0ikfl1cjtbluznuubsljqwicmu0y0a43en",
+        "token_endpoint": "",
+        "client_secret": "",
+        "scope": "",
+        "grant_type": "",
+        "username": "",
+        "password": "",
+        "hmac_key": "",
+        "hmac_signature": "",
+        "client_id": "",
+        "api_config": {
+          "id": 4932,
+          "name": "/obp/v4.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/account-access/revoke",
+          "description": "<p>Revoke the User identified by USER_ID access to the view identified by VIEW_ID.</p><p>User Authentication is Required. The User must be logged in. The Application must also be authenticated. and the user needs to be account holder.</p><p><strong>URL Parameters:</strong></p><p><a href=\"/glossary#Account.account_id\">ACCOUNT_ID</a>: 8ca8a7e4-6d02-40e3-a129-0b2bf89de9f0</p><p><a href=\"/glossary#Bank.bank_id\">BANK_ID</a>: gh.29.uk</p><p><strong>JSON request body fields:</strong></p><p><a href=\"/glossary#\"><strong>is_system</strong></a>: true</p><p><a href=\"/glossary#\"><strong>user_id</strong></a>: 9ca9a7e4-6d02-40e3-a129-0b2bf89de9b1</p><p><a href=\"/glossary#view\"><strong>view</strong></a>:</p><p><a href=\"/glossary#\"><strong>view_id</strong></a>: owner</p><p><strong>JSON response body fields:</strong></p><p><a href=\"/glossary#revoked\"><strong>revoked</strong></a>:</p>",
+          "method": "POST",
+          "auth_type": "2",
+          "parameters": null,
+          "headers": "[]",
+          "is_enabled": 1,
+          "ai_flag": 0,
+          "nb_test_cases": 0,
+          "application_id": 240,
+          "created_at": "2024-12-06T23:19:27.472791",
+          "updated_at": "2024-12-06T23:19:27.472791",
+          "api": "http://localhost:8080//obp/v4.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}/account-access/revoke",
+          "summary": "Revoke User access to View",
+          "responses": "\"[{\\\"Code\\\": \\\"201\\\", \\\"Description\\\": \\\"Success\\\", \\\"Structure JSON\\\": {\\\"required\\\": [\\\"revoked\\\"], \\\"properties\\\": {\\\"revoked\\\": {\\\"type\\\": \\\"boolean\\\", \\\"example\\\": \\\"true\\\"}}}}, {\\\"Code\\\": \\\"400\\\", \\\"Description\\\": \\\"Error\\\", \\\"Structure JSON\\\": {\\\"properties\\\": {\\\"message\\\": {\\\"type\\\": \\\"string\\\", \\\"example\\\": \\\"OBP-20001: User not logged in. Authentication is required!\\\"}}}}]\"",
+          "authentication": 2,
+          "type_authentication": 2,
+          "is_swagger": 1,
+          "is_list": false,
+          "project_id": 170,
+          "operationId": null,
+          "basePath": "/",
+          "parametres_path": "[{\"name\": \"ACCOUNT_ID\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"The account id\"}, {\"name\": \"BANK_ID\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"The bank id\"}]",
+          "parametres_query": "[]",
+          "parametres_header": "[]",
+          "parametres_form_data": "[]",
+          "parametres_body": "[{\"name\": \"user_id\", \"in\": \"body\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"\", \"enum\": null, \"default\": null, \"minimum\": null, \"maximum\": null, \"example\": \"9ca9a7e4-6d02-40e3-a129-0b2bf89de9b1\", \"nullable\": null, \"readOnly\": null, \"writeOnly\": null}, {\"name\": \"view\", \"in\": \"body\", \"required\": true, \"type\": \"string\", \"format\": null, \"description\": \"\", \"enum\": null, \"default\": null, \"minimum\": null, \"maximum\": null, \"example\": null, \"nullable\": null, \"readOnly\": null, \"writeOnly\": null, \"$ref\": \"#/definitions/PostViewJsonV400\"}]",
+          "response_headers": "{}",
+          "consumes": "[]",
+          "produces": "[]",
+          "accept": "[]",
+          "securityDefinitions": "{\"directLogin\": {\"type\": \"apiKey\", \"description\": \"https://github.com/OpenBankProject/OBP-API/wiki/Direct-Login\", \"in\": \"header\", \"name\": \"Authorization\"}, \"gatewayLogin\": {\"type\": \"apiKey\", \"description\": \"https://github.com/OpenBankProject/OBP-API/wiki/Gateway-Login\", \"in\": \"header\", \"name\": \"Authorization\"}}",
+          "security": "[{\"directLogin\": [], \"gatewayLogin\": []}]",
+          "methode_authentication": "apiKey"
+        }
+      }
+    ]
+  }
+]

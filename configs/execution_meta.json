@@ -1,0 +1,14 @@
+{
+  "execution_id": 230,
+  "project_id": 186,
+  "tenant_id": "myrealm",
+  "test_type": "all",
+  "test_types": [
+    "api",
+    "api_e2e"
+  ],
+  "campagne_id": 61,
+  "campagne_type": "api",
+  "callback_url": "/public/executions/230/results",
+  "token": "vKfkGuc7aDxff2ZmKkInm_pLy73HmAdGkEK5J6k3qIM"
+}
