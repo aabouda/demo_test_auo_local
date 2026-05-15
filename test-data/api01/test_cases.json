@@ -1,0 +1,1852 @@
+[
+  {
+    "test_case_id": 20958,
+    "name": "POST /api/customers – valid payload with all fields",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20959,
+    "name": "POST /api/customers – valid payload with required fields only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20960,
+    "name": "POST /api/customers – field 'nom' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20961,
+    "name": "POST /api/customers – field 'nom' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20962,
+    "name": "POST /api/customers – field 'nom' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20963,
+    "name": "POST /api/customers – required field 'nom' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20964,
+    "name": "POST /api/customers – field 'nom' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20965,
+    "name": "POST /api/customers – field 'prenom' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20966,
+    "name": "POST /api/customers – field 'prenom' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20967,
+    "name": "POST /api/customers – field 'prenom' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20968,
+    "name": "POST /api/customers – required field 'prenom' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20969,
+    "name": "POST /api/customers – field 'prenom' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20970,
+    "name": "POST /api/customers – field 'cin' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Static.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20971,
+    "name": "POST /api/customers – field 'cin' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Static.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20972,
+    "name": "POST /api/customers – field 'cin' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Static.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20973,
+    "name": "POST /api/customers – required field 'cin' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20974,
+    "name": "POST /api/customers – field 'cin' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Static.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20975,
+    "name": "POST /api/customers – field 'email' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20976,
+    "name": "POST /api/customers – field 'email' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20977,
+    "name": "POST /api/customers – field 'email' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20978,
+    "name": "POST /api/customers – required field 'email' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20979,
+    "name": "POST /api/customers – field 'email' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20980,
+    "name": "POST /api/customers – field 'email' has invalid format (email)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20981,
+    "name": "POST /api/customers – field 'phone' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20982,
+    "name": "POST /api/customers – field 'phone' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20983,
+    "name": "POST /api/customers – field 'phone' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20984,
+    "name": "POST /api/customers – required field 'phone' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20985,
+    "name": "POST /api/customers – field 'phone' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20986,
+    "name": "POST /api/customers – field 'type' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Static.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20987,
+    "name": "POST /api/customers – field 'type' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Static.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20988,
+    "name": "POST /api/customers – field 'type' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Static.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20989,
+    "name": "POST /api/customers – field 'type' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Static.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20990,
+    "name": "POST /api/customers – field 'type' has value outside allowed enum",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Static.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20991,
+    "name": "POST /api/customers – multiple invalid fields: 'nom', 'prenom'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.integer}}",
+      "prenom": "",
+      "cin": "{{Random.cin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20992,
+    "name": "POST /api/customers – multiple invalid fields: 'nom', 'cin'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.integer}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20993,
+    "name": "POST /api/customers – multiple invalid fields: 'nom', 'email'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.integer}}",
+      "prenom": "{{Random.prenom}}",
+      "cin": "{{Random.cin}}",
+      "email": "",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20994,
+    "name": "POST /api/customers – valid payload with shuffled field order",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "email": "{{Random.email}}",
+      "type": "{{Random.type}}",
+      "prenom": "{{Random.prenom}}",
+      "phone": "{{Random.phone}}",
+      "nom": "{{Random.nom}}",
+      "cin": "{{Random.cin}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20995,
+    "name": "Valid Request",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.lastname}}",
+      "prenom": "{{Random.firstname}}",
+      "cin": "{{Random.nin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 201,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20996,
+    "name": "Missing Required Field",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "prenom": "{{Random.firstname}}",
+      "cin": "{{Random.nin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}",
+      "nom": ""
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20997,
+    "name": "Wrong Type Prename",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.lastname}}",
+      "prenom": "{{Random.amount}}",
+      "cin": "{{Random.nin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20998,
+    "name": "Random Field Order",
+    "test_type": "api",
+    "enabled": true,
+    "api": "",
+    "end_point": "",
+    "payload": {},
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 20999,
+    "name": "Empty Array Validation",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers",
+    "end_point": "/api/customers",
+    "payload": {
+      "nom": "{{Random.name}}",
+      "prenom": "{{Random.name}}",
+      "cin": "{{Random.nin}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 201,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21000,
+    "name": "PUT /api/customers/{id} – valid payload with all fields",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21001,
+    "name": "PUT /api/customers/{id} – field 'nom' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21002,
+    "name": "PUT /api/customers/{id} – field 'nom' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21003,
+    "name": "PUT /api/customers/{id} – field 'nom' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21004,
+    "name": "PUT /api/customers/{id} – field 'nom' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Static.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21005,
+    "name": "PUT /api/customers/{id} – field 'prenom' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21006,
+    "name": "PUT /api/customers/{id} – field 'prenom' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21007,
+    "name": "PUT /api/customers/{id} – field 'prenom' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21008,
+    "name": "PUT /api/customers/{id} – field 'prenom' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Static.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21009,
+    "name": "PUT /api/customers/{id} – field 'email' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21010,
+    "name": "PUT /api/customers/{id} – field 'email' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21011,
+    "name": "PUT /api/customers/{id} – field 'email' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21012,
+    "name": "PUT /api/customers/{id} – field 'email' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21013,
+    "name": "PUT /api/customers/{id} – field 'email' has invalid format (email)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Static.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21014,
+    "name": "PUT /api/customers/{id} – field 'phone' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21015,
+    "name": "PUT /api/customers/{id} – field 'phone' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21016,
+    "name": "PUT /api/customers/{id} – field 'phone' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21017,
+    "name": "PUT /api/customers/{id} – field 'phone' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Static.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21018,
+    "name": "PUT /api/customers/{id} – multiple invalid fields: 'nom', 'prenom'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.integer}}",
+      "prenom": "",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21019,
+    "name": "PUT /api/customers/{id} – multiple invalid fields: 'nom', 'email'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.integer}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21020,
+    "name": "PUT /api/customers/{id} – multiple invalid fields: 'nom', 'phone'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.integer}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": ""
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21021,
+    "name": "PUT /api/customers/{id} – valid payload with shuffled field order",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/VuseXv",
+    "end_point": "/api/customers/VuseXv",
+    "payload": {
+      "nom": "{{Random.nom}}",
+      "prenom": "{{Random.prenom}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21022,
+    "name": "Valid PUT Request",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {
+      "nom": "{{Random.lastname}}",
+      "prenom": "{{Random.firstname}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21023,
+    "name": "Missing Required Field",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {
+      "nom": "{{Random.name}}",
+      "prenom": "{{Random.firstname}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 404,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21024,
+    "name": "Invalid Type",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {
+      "email": "{{Random.email}}",
+      "nom": "{{Random.name}}",
+      "prenom": "{{Random.name}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21025,
+    "name": "Empty Field",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {
+      "nom": "{{Random.lastname}}",
+      "prenom": "",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21026,
+    "name": "JSON Structure Validation",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {
+      "nom": "{{Random.lastname}}",
+      "prenom": "{{Random.firstname}}",
+      "email": "{{Random.email}}",
+      "phone": "{{Random.phone}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21058,
+    "name": "Valid deletion",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {},
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21059,
+    "name": "Missing path parameter",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {},
+    "expected_status": 404,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21060,
+    "name": "Invalid ID format",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {},
+    "expected_status": 404,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21061,
+    "name": "Response validation",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/customers/{{Static.id}}",
+    "end_point": "/api/customers/{{Static.id}}",
+    "payload": {},
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21062,
+    "name": "Valid GET Request",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts/{{Static.id}}",
+    "end_point": "/api/accounts/{{Static.id}}",
+    "payload": {},
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21063,
+    "name": "Missing Required Field",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts/{{Static.id}}",
+    "end_point": "/api/accounts/{{Static.id}}",
+    "payload": {},
+    "expected_status": 404,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21064,
+    "name": "Response Structure Validation",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts/{{Static.id}}",
+    "end_point": "/api/accounts/{{Static.id}}",
+    "payload": {},
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21027,
+    "name": "POST /api/accounts – valid payload with all fields",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21028,
+    "name": "POST /api/accounts – valid payload with required fields only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21029,
+    "name": "POST /api/accounts – field 'customerId' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Static.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21030,
+    "name": "POST /api/accounts – field 'customerId' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Static.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21031,
+    "name": "POST /api/accounts – field 'customerId' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Static.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21032,
+    "name": "POST /api/accounts – required field 'customerId' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21033,
+    "name": "POST /api/accounts – field 'customerId' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Static.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21034,
+    "name": "POST /api/accounts – field 'type' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Static.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21035,
+    "name": "POST /api/accounts – field 'type' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Static.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21036,
+    "name": "POST /api/accounts – field 'type' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Static.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21037,
+    "name": "POST /api/accounts – required field 'type' missing",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21038,
+    "name": "POST /api/accounts – field 'type' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Static.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21039,
+    "name": "POST /api/accounts – field 'type' has value outside allowed enum",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Static.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21040,
+    "name": "POST /api/accounts – field 'initialDeposit' with wrong type (str instead of number)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Static.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21041,
+    "name": "POST /api/accounts – field 'initialDeposit' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Static.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21042,
+    "name": "POST /api/accounts – field 'initialDeposit' below minimum value",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Static.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21043,
+    "name": "POST /api/accounts – field 'currency' with wrong type (str instead of string)",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Static.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21044,
+    "name": "POST /api/accounts – field 'currency' is empty string",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Static.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21045,
+    "name": "POST /api/accounts – field 'currency' contains whitespace only",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Static.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21046,
+    "name": "POST /api/accounts – field 'currency' is null",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Static.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21047,
+    "name": "POST /api/accounts – field 'currency' has value outside allowed enum",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Static.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21048,
+    "name": "POST /api/accounts – multiple invalid fields: 'customerId', 'type'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.integer}}",
+      "type": "",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21049,
+    "name": "POST /api/accounts – multiple invalid fields: 'customerId', 'initialDeposit'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.integer}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "NaN",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21050,
+    "name": "POST /api/accounts – multiple invalid fields: 'customerId', 'currency'",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.integer}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "currency": ""
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21051,
+    "name": "POST /api/accounts – valid payload with shuffled field order",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerId}}",
+      "currency": "{{Random.currency}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "type": "{{Random.type}}"
+    },
+    "expected_status": 200,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21052,
+    "name": "Valid Request",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerid}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.amount}}",
+      "currency": "{{Random.currencycode}}"
+    },
+    "expected_status": 201,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21053,
+    "name": "Missing Initial Deposit",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerid}}",
+      "type": "{{Random.type}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21054,
+    "name": "Wrong Type Type",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerid}}",
+      "type": "INVALID_TYPE",
+      "initialDeposit": "{{Random.amount}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21055,
+    "name": "Wrong Type Currency",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerid}}",
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.amount}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21056,
+    "name": "Random Field Order",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "type": "{{Random.type}}",
+      "initialDeposit": "{{Random.initialDeposit}}",
+      "customerId": "{{Random.customerId}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 201,
+    "expected_response": {},
+    "role": {}
+  },
+  {
+    "test_case_id": 21057,
+    "name": "Empty Array Validation",
+    "test_type": "api",
+    "enabled": true,
+    "api": "/api/accounts",
+    "end_point": "/api/accounts",
+    "payload": {
+      "customerId": "{{Random.customerid}}",
+      "type": "",
+      "initialDeposit": "{{Random.amount}}",
+      "currency": "{{Random.currency}}"
+    },
+    "expected_status": 400,
+    "expected_response": {},
+    "role": {}
+  }
+]

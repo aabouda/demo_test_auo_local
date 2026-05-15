@@ -1,0 +1,41 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# config.yml — Configuration du framework TuringOne
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# Lanceur : python run.py [--config autre_config.yml]
+#
+# ⚠  Ne pas commiter ce fichier si le security_token est renseigné.
+#    Utiliser une variable d'environnement à la place :
+#    TURING1_SECURITY_TOKEN=xxx python run.py
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── TuringOne Backend ────────────────────────────────────────────────────────
+turing_one:
+  api_url: ""
+  security_token: "vKfkGuc7aDxff2ZmKkInm_pLy73HmAdGkEK5J6k3qIM"
+
+  callback_url: null
+  callback_token: null
+
+# ── Exécution ────────────────────────────────────────────────────────────────
+execution:
+  campagne_type: "api"    # ui | api | api_e2e
+  campagne_id: 61
+  environment_id: 74
+  create_execution: true
+  execution_id: null
+
+# ── Données de test ──────────────────────────────────────────────────────────
+test_data:
+  args_file: "api01"
+
+# ── UI — Playwright/Cucumber ─────────────────────────────────────────────────
+ui:
+  headless: true
+  keep_videos: false
+  slow_mo: 0
+  browser: "chromium"
+
+# ── Rapports & Artefacts ─────────────────────────────────────────────────────
+reports:
+  upload_to_s3: false
